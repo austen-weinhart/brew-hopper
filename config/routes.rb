@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-	get "brewers" => "brewers#index"
+get "brewers" => "brewers#index"
 	
 end
