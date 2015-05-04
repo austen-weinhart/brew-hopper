@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
-get "brewers" => "brewers#index"
+resources :brewers
+
 	
 end
