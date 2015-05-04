@@ -22,6 +22,25 @@ class BrewersController < ApplicationController
     end
   end
 
+  def edit
+    @brewer = Brewer.find(params[:id])
+  end
+
+  def update
+    @brewer = Brewer.find(params[:id])
+    if @brewer.update_attributes(brewer_params)
+      redirect_to brewer_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @brewer = Brewer.find(params[:id])
+    @brewer.destroy
+    redirect_to brewers_path
+  end
+
 private
 def brewer_params
   params.require(:brewer).permit(:brewery, :email, :address, :state, :zip_code)
