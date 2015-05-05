@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pale_lager: MyString
+  pilsner: MyString
+  light_lager: MyString
+  dark_lager: MyString
+  brown_ale: MyString
+  porter: MyString
+  stout: MyString
+  witbier: MyString
+  other: MyString
+
+two:
+  pale_lager: MyString
+  pilsner: MyString
+  light_lager: MyString
+  dark_lager: MyString
+  brown_ale: MyString
+  porter: MyString
+  stout: MyString
+  witbier: MyString
+  other: MyString
