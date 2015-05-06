@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   
   # Routes for user
   get "users" => "users#index" 
@@ -68,11 +67,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-=======
-<<<<<<< HEAD
+
   resources :beers
   resources :styles
-=======
 
 resources :brewers
 
@@ -85,6 +82,4 @@ post "brewers/:id/edit" => "brewers#update"
 patch "brewers/:id" => "brewers#update"
 delete "brewers/:id" => "brewers#destroy"
 	
->>>>>>> f30dc7f94aa1d27859bfcf4685d0a6a0494783df
->>>>>>> master
 end

@@ -11,28 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150505032322) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150501225256) do
-=======
-ActiveRecord::Schema.define(version: 20150501225139) do
->>>>>>> f30dc7f94aa1d27859bfcf4685d0a6a0494783df
->>>>>>> master
+ActiveRecord::Schema.define(version: 20150505162451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-=======
-<<<<<<< HEAD
   create_table "beers", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
@@ -48,18 +31,36 @@ ActiveRecord::Schema.define(version: 20150501225139) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "users", force: :cascade do |t|
-=======
   create_table "brewers", force: :cascade do |t|
     t.string   "brewery"
     t.string   "email"
     t.string   "address"
     t.string   "state"
     t.integer  "zip_code"
->>>>>>> f30dc7f94aa1d27859bfcf4685d0a6a0494783df
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> master
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string   "pale_lager"
+    t.string   "pilsner"
+    t.string   "light_lager"
+    t.string   "dark_lager"
+    t.string   "brown_ale"
+    t.string   "porter"
+    t.string   "stout"
+    t.string   "witbier"
+    t.string   "other"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
