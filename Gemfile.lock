@@ -164,8 +164,11 @@ DEPENDENCIES
   spring (~> 1.3.5)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   therubyracer
 >>>>>>> f30dc7f94aa1d27859bfcf4685d0a6a0494783df
+>>>>>>> master
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
