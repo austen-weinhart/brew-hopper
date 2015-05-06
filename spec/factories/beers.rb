@@ -2,8 +2,6 @@ FactoryGirl.define do
   factory :beer do
     name "Generic Beer"
     image_url "image_placeholder"
-    style "Generic Style"
-    brewer "Generic Brewer"
     abv 4.5
     availability "Year-Round"
     description "placeholder text"
