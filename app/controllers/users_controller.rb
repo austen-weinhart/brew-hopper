@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-
   before_action :require_login, except: [:new, :create]
-
+  
   def index
     @users = User.all
   end
@@ -27,7 +26,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
+    
     if @user.update_attributes(user_params)
       redirect_to edit_user_path(current_user)
     else
@@ -36,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   private
-
+  
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
