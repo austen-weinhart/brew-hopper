@@ -1,0 +1,32 @@
+<%= form_for :brewer do |f| %>
+
+	<div>
+		<%= f.label :brewery %>
+		<%= f.text_field :brewery %>
+	</div>
+	<br>
+	<div>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>
+	<br>
+	<div>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</div>
+	<br>
+	<div>
+		<%= f.label :state %>
+		<%= f.text_field :state %>
+	</div>
+	<br>
+	<div>
+		<%= f.label :zip_code %>
+		<%= f.text_field :zip_code %>
+	</div>
+	<br>
+	<div>
+		<%= f.submit "Submit Changes" %>
+	</div>
+
+<% end %>
