@@ -75,13 +75,18 @@ RSpec.describe BeersController, :type => :controller do
   ## POST #create
   ####################################################################################
 
-  # describe "POST #create" do
-    # it "persists an item to the DB" do
-    #   expect {Beer.create}.to change(Beer, :count).by(1)
-    #   expect {post :create, beer: valid_attributes}.to change(Beer, :count).by(1)
-    #   like get :index or :new
-    # end
-  # end
+  describe "POST #create" do
+    before do
+      # @test_beer = Beer.create!(name: "Blaise Beer")
+      get :new
+    end
+
+    it "persists an item to the DB" do
+      expect {Beer.create(name: "Blaise Beer")}.to change(Beer, :count).by(1)
+      # expect {post :create, beer: valid_attributes}.to change(Beer, :count).by(1)
+      # like get :index or :new
+    end
+  end
 
   ####################################################################################
   ## GET #edit
