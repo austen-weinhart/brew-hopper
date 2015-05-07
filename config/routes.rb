@@ -68,8 +68,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :beers
-  resources :styles
+resources :beers
+resources :styles
 
 resources :brewers
 
