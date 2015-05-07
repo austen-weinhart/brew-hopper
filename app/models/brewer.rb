@@ -7,4 +7,5 @@ class Brewer < ActiveRecord::Base
   validates :state, presence: true
   validates :zip_code, presence: true
 
+
 end
