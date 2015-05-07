@@ -1,0 +1,22 @@
+<!-- This is the log in screen to create a new user session -->
+<div class="col-md-2">
+  <div class="login text-center">
+    <h1>Log In</h1>
+    
+    <%= form_for :login do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+
+      <div>
+        <%= f.submit 'Log In', class: "btn btn-primary" %> <%= link_to "Home", user_path, class: "btn btn-primary" %>
+      </div> 
+    <% end %>
+  </div>  
+</div>

@@ -21,13 +21,15 @@ class User < ActiveRecord::Base
 	end
 	
 	def format_user_input
-    	self.name = self.name.titleize
+    	self.first_name = self.first_name.titleize
+    	self.last_name = self.last_name.titleize
     	self.email = self.email.downcase
   	end
 
 	
 	#validations
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :email, presence: true, uniqueness: {case_sensitive: false}, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
   
   has_secure_password
