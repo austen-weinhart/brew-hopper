@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20150508220500) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beers", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
-    t.string   "style"
-    t.string   "brewers"
     t.float    "abv"
     t.string   "availability"
     t.text     "description"
@@ -28,8 +28,11 @@
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "review_id"
+    t.integer  "brewer_id"
+    t.integer  "style_id"
   end
 
+  add_index "beers", ["brewer_id"], name: "index_beers_on_brewer_id", using: :btree
   add_index "beers", ["review_id"], name: "index_beers_on_review_id", using: :btree
 
   create_table "brewers", force: :cascade do |t|
@@ -52,17 +55,9 @@
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "styles", force: :cascade do |t|
-    t.string   "pale_lager"
-    t.string   "pilsner"
-    t.string   "light_lager"
-    t.string   "dark_lager"
-    t.string   "brown_ale"
-    t.string   "porter"
-    t.string   "stout"
-    t.string   "witbier"
-    t.string   "other"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,6 +69,7 @@
     t.string   "last_name"
   end
 
+  add_foreign_key "beers", "brewers"
   add_foreign_key "beers", "reviews"
   add_foreign_key "reviews", "users"
 end
