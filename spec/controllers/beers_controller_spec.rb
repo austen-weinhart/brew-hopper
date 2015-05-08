@@ -48,9 +48,9 @@ RSpec.describe BeersController, :type => :controller do
     end
   end # end of describe get show
 
-  # ####################################################################################
-  # ## GET #new
-  # ####################################################################################
+  ####################################################################################
+  ## GET #new
+  ####################################################################################
 
   describe "GET #new" do
     before do
@@ -112,7 +112,7 @@ RSpec.describe BeersController, :type => :controller do
 
   # describe "PUT/PATCH #update" do
   #   before do
-  #       @test_beer = Beer.create
+  #       @test_beer = Beer.create(name: "Blaise Beer")
   #       get :edit, id: @test_beer.id,
   #   end
 
@@ -127,7 +127,7 @@ RSpec.describe BeersController, :type => :controller do
 
   #     before do
   #       # remember to use line 2  #before_action :set_item, 
-  #       # only: [:show, :edit, :update, :destroy] in items 
+  #       # only: [:show, :edit, :update, :destroy] in beers 
   #       # controller to pass these tests
   #       patch :update, id: @test_beer.id,
   #       beer: new_attributes
@@ -137,6 +137,7 @@ RSpec.describe BeersController, :type => :controller do
   #     it "should update the beer record in the database" do
   #       expect(@test_beer.reload.qty).to eq(5)
   #     end
+
   #     it "redirect to the show path for this beer" do
   #       #expect(response).to redirect_to beer_path
   #       # get :edit
@@ -166,6 +167,7 @@ RSpec.describe BeersController, :type => :controller do
   #         expect(@test_beer.reload.name).to_not be_nil
   #       end        
   #     end
+      
   #     it "should rerender the edit view template" do
   #       expect(response).to render_template :edit
   #     end
