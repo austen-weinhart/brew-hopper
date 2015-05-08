@@ -1,7 +1,9 @@
 class BeersController < ApplicationController
   # before_action :require_login
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
    def new
-      @beer = beer.new
+      @beer = Beer.new
       @brewers = Brewer.all
       @users = User.all
     end # end of new method
@@ -25,27 +27,27 @@ class BeersController < ApplicationController
     @beers = Beer.all
   end # end of index method
 
-  # def edit
-  #   @aquarium = Aquarium.find(params[:id])
-  #  end # end of edit method
+  def edit
+    @beer = Beer.find(params[:id])
+   end # end of edit method
 
-  #  def update
-  #   @aquarium = Aquarium.find(params[:id])
+   def update
+    @beer = Beer.find(params[:id])
 
-  #   if @aquarium.update_attributes(aquarium_params)
-  #     redirect_to aquaria_path
-  #   else
-  #     render :edit
-  #   end
-  #  end # end of update method
+    if @beer.update_attributes(beer_params)
+      redirect_to beers_path
+    else
+      render :edit
+    end
+   end # end of update method
 
   def destroy
-    @beer = Beer.find(params[:id])
+    # @beer = Beer.find(params[:id])
     @beer.destroy
-    redirect_to(:back)
+    redirect_to beers_path
   end # end of destroy method
 
-  # private
+  private
     # def require_login
     #   unless logged_in?
     #     flash[:error] = "You must be logged in to access that page."
@@ -53,7 +55,11 @@ class BeersController < ApplicationController
     #   end
     # end # end of require_login method
 
-    # def beer_params
-    #   params.require(:beer).permit(:name, :description)
-    # end  # end of beer_params method
+    def beer_params
+      params.require(:beer).permit(:name)
+    end  # end of beer_params method
+
+    def set_item
+      @beer = Beer.find(params[:id])
+    end
 end # end of Beers Controller
