@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :brewer do
+  	id 1
 	brewery "Generic Brewery"
 	email "brewery@example.com"
 	address "123 main street"
