@@ -1,0 +1,4 @@
+!-- drop down category -->
+    <div>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose a category"}  %>
+    </div>
