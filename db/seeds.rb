@@ -7,3 +7,42 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #add comment for test branch
+
+Style.create(
+	name: "Pale Lager"
+	)
+
+Style.create(
+	name: "Pilsner"
+	)
+
+Style.create(
+	name: "Light Lager"
+	)
+
+Style.create(
+	name: "Dark Lager"
+	)
+
+Style.create(
+	name: "Porter"
+	)
+
+Style.create(
+	name: "Stout"
+	)
+
+Style.create(
+	name: "Witbier"
+	)
+
+Style.create(
+	name: "Brown Ale"
+	)
+
+
+
+
+
+
+
