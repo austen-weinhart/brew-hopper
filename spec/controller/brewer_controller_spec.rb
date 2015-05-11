@@ -4,7 +4,9 @@ require 'rails_helper'
 
 RSpec.describe BrewersController, :type => :controller do
   before (:each) do  
-    @brewers = Brewer.create(brewery: "Dan's Brewery", email: "dan@brewery.com", address: "123 main street", state: "CA", zip_code: 90265)
+    @brewer1 = Brewer.create(brewery: "Dan's Brewery", email: "dan@brewery.com", address: "123 main street", state: "CA", zip_code: 90265)
+    @brewer2 = Brewer.create(brewery: "Austen's Brewery", email: "austen@brewery.com", address: "789 south street", state: "CA", zip_code: 90265)
+ 
   end
 
 
@@ -23,14 +25,14 @@ RSpec.describe BrewersController, :type => :controller do
     end
 
     it "assigns @brewers to include items" do
-      expect(assigns(:brewers)).to include(@brewers)
+      expect(assigns(:brewers)).to include(@brewer1)
     end
 
   end
 
   describe "GET #show" do
     before :each do
-      get :show, @brewers.id
+      get :show, id: @brewer1.id
     end
 
     it "renders the show template" do
@@ -63,7 +65,7 @@ RSpec.describe BrewersController, :type => :controller do
     end
 
     it "persists an item to the DB" do
-      expect {Brewer.create(brewery: "Dan's Brewery")}.to change(Brewer, :count).by(1)
+       expect {Brewer.create(brewery: "Blaise Beer")}.to change(Brewer, :count).by(1)
     end
   end
 
