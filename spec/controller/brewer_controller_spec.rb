@@ -35,7 +35,35 @@ RSpec.describe BrewersController, :type => :controller do
 
     it "renders the show template" do
       expect(response).to have_http_status(200)
-      expect(response).to render_template :show
+    end
+  end
+
+  describe "GET #new" do
+    before do
+      get :new
+    end
+
+    it "renders the new template with status 200" do
+      expect(response).to render_template("new")
+      expect(response).to have_http_status(200)
+    end
+
+    it "makes a new brewer" do
+      expect(assigns(:brewer)).to be_a(Brewer)
+    end
+
+    it "is not persisted" do 
+        expect{Brewer.new}.to change(Brewer, :count).by(0)
+      end
+  end
+
+  describe "POST #create" do
+    before do
+      get :new
+    end
+
+    it "persists an item to the DB" do
+      expect {Brewer.create(brewery: "Dan's Brewery")}.to change(Brewer, :count).by(1)
     end
   end
 
