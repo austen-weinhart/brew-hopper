@@ -1,12 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-#add comment for test branch
+Style.destroy_all
+Brewer.destroy_all
+Beer.destroy_all
 
 Style.create(
 	name: "Pale Lager"
@@ -75,7 +69,13 @@ Brewer.create(
   website: "http://www.anchorbrewing.com/"
 	)
 
-
+Beer.create(
+  name: "Arrogant Bastard Ale",
+  image_url: "http://www.prosportstickers.com/product_images/r/arrogant_bastard_ale_bottle_and_glass_sticker__79225.jpg",
+  abv: 7.20,
+  availability: "Year-round",
+  description: "This is an aggressive ale. You probably won't like it. It is quite doubtful that you have the taste or sophistication to be able to appreciate an ale of this quality and depth. We would suggest that you stick to safer and more familiar territory–maybe something with a multi-million dollar ad campaign aimed at convincing you it’s made in a little brewery, or one that implies that their tasteless fizzy yellow beverage will give you more sex appeal. Perhaps you think multi-million dollar ad campaigns make things taste better. Perhaps you're mouthing your words as you read this. At Stone Brewing, we believe that pandering to the lowest common denominator represents the height of tyranny - a virtual form of keeping the consumer barefoot and stupid. Brought forth upon an unsuspecting public in 1997, Arrogant Bastard Ale openly challenged the tyrannical overlords who were brazenly attempting to keep Americans chained in the shackles of poor taste. As the progenitor of its style, Arrogant Bastard Ale has reveled in its unprecedented and uncompromising celebration of intensity. There have been many nods to Arrogant Bastard Ale…even outright attempts to copy it… but only one can ever embody the true nature of liquid Arrogance!"
+  )
 
 
 

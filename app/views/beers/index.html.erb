@@ -1,1 +1,55 @@
-<h1>All Beers</h1>
+<body>
+<!-- Beginning of Nav Bar -->
+<!-- <div class="ui inverted menu">
+  <a class="header item" href="#">Brew Hopper</a> -->
+
+  <!-- Begin Dropdown Menu -->
+<!--   <div class="ui dropdown item">
+    Deals
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <a class="item" href="#">Local</a>
+      <a class="item" href="#">Online</a>
+    </div>
+  </div> -->
+  <!-- End of Dropdown Menu -->
+
+<!--   <a class="item" href="#">Coupons</a>
+  <a class="item" href="#">Browse</a>
+  <a class="item" href="#">Forums</a>
+  <div class="item">
+    <div class="ui icon input">
+      <input type="search" placeholder="Search deals..."/>
+      <i class="search icon"></i>
+    </div>
+  </div>
+</div> -->
+<!-- End of Nav Bar -->
+
+<div class="ui grid">
+  <div class="six wide column">
+    <!-- Cards Start Here -->
+    <% @beers.each do |beer| %>
+      <div class="ui card">
+        <div class="image">
+          <%= image_tag(beer.image_url, :alt => "beer.name") %>
+        </div>
+        <div class="content">
+          <div class="meta"><i><%= beer.name %></i></div>
+          <%= link_to beer.name, beer_path(beer), :target => "_blank" %>
+        </div>
+        <div class="extra content">
+          <div class="ui green header">$20</div>
+          +Free shipping
+        </div>
+    <% end %>  
+    </div>
+    <!-- Cards End Here -->
+  </div>
+</div>
+<!-- <script>
+  $(function(){
+    $('.dropdown').dropdown({transition: 'drop'});
+  });
+</script> -->
+</body>
