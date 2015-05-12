@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # bootstrap
 gem 'bootstrap-sass'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
