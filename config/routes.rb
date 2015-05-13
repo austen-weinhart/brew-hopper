@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :beers, only: [:index, :show, :create]
+    resources :brewers, only: [:index, :show, :create]
   end
 
   # Routes for user
@@ -77,16 +78,17 @@ Rails.application.routes.draw do
 
 resources :beers
 resources :styles
-
 resources :brewers
 
-get "brewers/" => "brewers#index" 
-get "brewers/new" => "brewers#new" 
-get "brewers/:id" => "brewers#show" #, as: :post
-post "brewers/" => "brewers#create"
-get "brewers/:id/edit" => "brewers#edit" #, as: :edit_post
-post "brewers/:id/edit" => "brewers#update"
-patch "brewers/:id" => "brewers#update"
-delete "brewers/:id" => "brewers#destroy"
+
+# get "brewers/" => "brewers#index" 
+# get "brewers/new" => "brewers#new" 
+# get "brewers/:id" => "brewers#show" #, as: :post
+# post "brewers/" => "brewers#create"
+# get "brewers/:id/edit" => "brewers#edit" #, as: :edit_post
+# post "brewers/:id/edit" => "brewers#update"
+# patch "brewers/:id" => "brewers#update"
+# delete "brewers/:id" => "brewers#destroy"
+
 	
 end
