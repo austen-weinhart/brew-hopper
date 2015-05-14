@@ -1,25 +1,28 @@
 <body>
-<div class="ui page grid"> 
-  <% @beers.each do |beer| %> 
-  <div class="four wide column">
+  <div class="basic horizontal segment">
+    <div class="ui four cards">
+    
+      <% @beers.each do |beer| %> 
+            
         <div class="ui card">
-          <div class="image">
+               
+          <div class="ui medium centered image">
             <%= image_tag(beer.image_url, :alt => "beer.name") %>
-          </div>
+          </div> <!-- end of ui medium centered image -->
+                 
           <div class="content">
             <div class="meta"><i><%= beer.name %></i></div>
             <%= link_to beer.name, beer_path(beer), :target => "_blank" %>
-          </div>
+          </div> <!-- end of content -->
+                  
           <div class="extra content">
             <div class="ui green header">$20</div>
-            +Free shipping
-          </div>
-        </div>
-        <!-- Cards End Here -->
-    </div>
-    <% end %>
-  </div>
-  <!-- four wide column ends here -->
-</div>
-<!-- ui page grid ends here -->
+          </div> <!-- end of extra content -->
+        </div> <!-- end of ui card -->
+            
+      <% end %> <!-- end of beers.each -->
+      
+    </div> <!-- end of ui four cards -->
+  </div> <!-- end of basic horizontal segment -->
+
 </body>
