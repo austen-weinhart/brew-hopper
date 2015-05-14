@@ -8,9 +8,9 @@
 	
 	<div class="ui grid">
 	<div class="six wide column">
-	<div class="ui cards">
+	
 		<% @brewers.each do |brewer| %>
-
+	<div class="ui cards">
   <div class="card">
     <a class="image">
       <%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>
