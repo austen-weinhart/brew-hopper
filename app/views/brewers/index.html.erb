@@ -1,28 +1,14 @@
 <body>
 	
-<div class="ui special cards">
-  <div class="card">
-    <div class="dimmable image">
-      <div class="ui dimmer">
-        <div class="content">
-          <div class="center">
-            <% @brewers.each do |brewer| %>
-          </div>
-        </div>
-      </div>
-      <img src="<%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>">
-    </div>
-    <div class="content">
-      <a class="header"><%= link_to brewer.brewery, brewer_path(brewer) %></a>
-    </div>
-    <div class="extra content">
-      <a>
+
+      <% @brewers.each do |brewer| %>
+      
+      <%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>
+      <%= link_to brewer.brewery, brewer_path(brewer) %>
+   
         <%= brewer.address %>
         <%= brewer.zip_code %>
-      </a>
-    </div>
-  </div>
-
+     
 
 
 
