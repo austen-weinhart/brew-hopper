@@ -1,14 +1,62 @@
-<h1>Brewers Branch</h1>
+<body>
+	
 
-<%= link_to 'Add your Brewery Now!', new_brewer_path %>
-<br>
-<% @brewers.each do |brewers| %>
+<%= link_to 'Add your Brewery Now!', new_brewer_path %>	
 
-<div>
-	<%= brewers.brewery %>
+	
+
+	
+	<div class="ui grid">
+	<div class="six wide column">
+	<div class="ui cards">
+		<% @brewers.each do |brewer| %>
+
+  <div class="card">
+    <a class="image">
+      <%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>
+    </a>
+    <div class="content">
+      <a class="header"><%= link_to brewer.brewery, brewer_path(brewer) %></a>
+      
+      <div class="extra content">
+        <%= brewer.address %>
+        <%= brewer.zip_code %>
+      </div>
+    </div>
+  </div>
+	</div> 
+  
 </div>
 
-<%= link_to 'Edit Brewery', edit_brewer_path(brewers) %>
 
 
-<% end %>
+	<% end %>	
+</div>
+			
+		</div><!-- end ui card class -->
+</div><!-- end ui-grid class -->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

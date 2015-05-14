@@ -36,6 +36,7 @@ Style.create(
 
 Brewer.create(
   brewery: "Stone Brewing Company",
+  image_url: "http://www.stonebrewing.com/mediaart/Circ_garg_small.jpg", 
   address: "1999 Citracado Parkway, Escondido, CA",
   zip_code: 92029,
   website: "http://www.stonebrewing.com/"
@@ -43,6 +44,7 @@ Brewer.create(
 
 Brewer.create(
   brewery: "Lagunitas Brewing Company",
+  image_url: "http://beerstreetjournal.com/wp-content/uploads/Lagunitas-Logo.jpg",
   address: "1280 North McDowell Boulevard, Petaluma, CA",
   zip_code: 94954,
   website: "http://www.lagunitas.com/"
@@ -50,6 +52,7 @@ Brewer.create(
 
 Brewer.create(
   brewery: "Allagash Brewing Company",
+  image_url: "http://bridgeviewtavern.com/wp-content/uploads/2014/10/Allagash-Logo-Maroon.jpg",
   address: "50 Industrial Way, Portland, ME,",
   zip_code: 04103,
   website: "http://www.allagash.com/"
@@ -57,6 +60,7 @@ Brewer.create(
 
 Brewer.create(
   brewery: "Brooklyn Brewery",
+  image_url: "http://brooklynbrewery.com/blog/wp-content/uploads/2013/11/Brewery-Logo-PNG.png",
   address: "79 North Eleventh Street, Brooklyn, NY",
   zip_code: 11249,
   website: "http://www.brooklynbrewery.com/"
@@ -64,6 +68,7 @@ Brewer.create(
 
 Brewer.create(
   brewery: "Anchor Brewing Company",
+  image_url: "http://ironhorsedc.com/wp-content/uploads/Anchor-Brewing-Oval-Logo-Detailed.jpg",
   address: "1705 Mariposa Street, San Francisco, CA",
   zip_code: 94107,
   website: "http://www.anchorbrewing.com/"

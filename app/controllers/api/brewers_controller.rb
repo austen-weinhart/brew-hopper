@@ -23,7 +23,7 @@ module API
 
 		private
 		def brewer_params
-			params.require(:brewer).permit(:brewery, :address, :zip_code, :website)
+			params.require(:brewer).permit(:brewery, :address, :zip_code, :website, :image_url)
 		end
 	end #end class
 
