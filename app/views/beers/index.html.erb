@@ -27,9 +27,9 @@
 <!-- End of Nav Bar -->
 
 <div class="ui grid">
+  <% @beers.each do |beer| %>
   <div class="six wide column">
     <!-- Cards Start Here -->
-    <% @beers.each do |beer| %>
       <div class="ui card">
         <div class="image">
           <%= image_tag(beer.image_url, :alt => "beer.name") %>
@@ -42,8 +42,8 @@
           <div class="ui green header">$20</div>
           +Free shipping
         </div>
-    <% end %>  
     </div>
+    <% end %> 
     <!-- Cards End Here -->
   </div>
 </div>
