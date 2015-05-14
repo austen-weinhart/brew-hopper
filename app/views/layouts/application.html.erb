@@ -11,7 +11,9 @@
 <body>
 <!-- Beginning of Nav Bar -->
 <div class="ui inverted menu">
-  <a class="header item" href="#">Brew Hopper</a>
+  <div class="header item">
+    <%= link_to 'Brew Hopper', root_path %>
+  </div>
 
   <!-- Begin Dropdown Menu -->
   <div class="ui dropdown item">
@@ -23,9 +25,12 @@
     </div>
   </div>
   <!-- End of Dropdown Menu -->
-
   <a class="item" href="#">Coupons</a>
-  <a class="item" href="#">Browse</a>
+  
+  <div class="item">
+    <%= link_to 'Browse', beers_path %>
+  </div>
+  
   <a class="item" href="#">Forums</a>
   <div class="item">
     <div class="ui icon input">
