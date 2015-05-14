@@ -1,40 +1,51 @@
 <body>
 	
+<div class="ui special cards">
+  <div class="card">
+    <div class="dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <% @brewers.each do |brewer| %>
+          </div>
+        </div>
+      </div>
+      <img src="<%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>">
+    </div>
+    <div class="content">
+      <a class="header"><%= link_to brewer.brewery, brewer_path(brewer) %></a>
+    </div>
+    <div class="extra content">
+      <a>
+        <%= brewer.address %>
+        <%= brewer.zip_code %>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%= link_to 'Add your Brewery Now!', new_brewer_path %>	
 
-	
 
-	
-	<div class="ui grid">
-	<div class="six wide column">
-	
-		<% @brewers.each do |brewer| %>
-	<div class="ui cards">
-  <div class="card">
-    <a class="image">
-      <%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>
-    </a>
-    <div class="content">
-      <a class="header"><%= link_to brewer.brewery, brewer_path(brewer) %></a>
-      
-      <div class="extra content">
-        <%= brewer.address %>
-        <%= brewer.zip_code %>
-      </div>
-    </div>
-  </div>
-	</div> 
-  
-</div>
+ 
 
 
 
 	<% end %>	
-</div>
+
 			
-		</div><!-- end ui card class -->
-</div><!-- end ui-grid class -->
+
 </body>
 
 
