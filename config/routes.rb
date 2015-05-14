@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # Routes for user
   get "users" => "users#index" 
-  # get "users/:id" => "users#show", as: :user
+  get "users/:id" => "users#show", as: :user
   get "signup" => "users#new"
   post "users" => "users#create"
   get "users/:id/edit" => "users#edit", as: :edit_user
