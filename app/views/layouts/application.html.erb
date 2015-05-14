@@ -35,7 +35,7 @@
   </div>
     <% if logged_in? %>
       <div class="item" id="login"> 
-        Logged in as: <%= current_user.name %> | <%= link_to "Edit", edit_user_path(current_user) %> | <%= link_to 'Log Out', logout_path, method: :delete %> 
+        Logged in as: <%= current_user.first_name %> | <%= link_to "Edit", edit_user_path(current_user) %> | <%= link_to 'Log Out', logout_path, method: :delete %> 
       </div>
     <% else %>
       <div class="item" id="login">
@@ -44,6 +44,17 @@
     <% end %>
 </div>
 <!-- End of Nav Bar -->
+
+<!-- Login in Messages -->
+<% if flash[:welcome] %>
+        <h4 class="bg-success flash"><%= flash[:welcome] %></h4>
+    <% end %>
+
+    <% if flash[:error] %>
+        <h4 class="bg-danger flash"><%= flash[:error] %></h4>
+    <% end %>
+<!-- End of login Messages -->
+
 <script>
   $(function(){
     $('.dropdown').dropdown({transition: 'drop'});

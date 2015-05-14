@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
       @user = User.find(params[:id])
     else
       flash[:error] = "You are not authorized to view this page!"
-      redirect_to posts_path
+      redirect_to beers_path
     end
   end
 
