@@ -13,13 +13,49 @@
           </div> <!-- end of content -->
                   
           <div class="extra content">
-            <div class="ui green header">$20</div>
+            <div class="ui green header">
+            <%= @brewer.address %> <%= @brewer.zip_code %>
+            </div>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
-            
       
     </div> <!-- end of ui four cards -->
   </div> <!-- end of basic horizontal segment -->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="basic horizontal segment">
+  <div class="equal height row">
+    <div class="ui four cards">
+
+      <% @brewer.beers.each do |beer| %>
+    <div class="ui card">     
+      <div class="ui medium centered image">
+        <div>
+          <% @brewer.beers.index(beer) + 1 %>
+            <%= image_tag(beer.image_url, :alt => "@brewer.brewery") %>
+            <div class="content">
+              <div class="ui green header">
+              <%= link_to beer.name, beer_path(beer) %><br>
+              </div>
+            </div><!-- end content -->
+
+            <div class="extra content">
+              <strong>Availability:</strong>   <%= beer.availability %><br>
+              <strong>ABV:</strong>   <%= beer.abv %>
+            </div>
+        </div>
+      </div><!-- end ui medium centered image -->
+    </div><!-- end ui card -->
+    </div><!-- end ui four cards -->
+  </div><!-- end equal height row -->
+</div><!-- end basic horizontal segment -->
+<% end %>
 
 <br>
 
@@ -32,3 +68,8 @@
 <br>
 
 <button><%= link_to "Go Back", brewers_path %></button>
+
+<br>
+
+
+

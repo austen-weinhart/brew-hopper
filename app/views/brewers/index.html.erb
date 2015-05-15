@@ -15,20 +15,21 @@
         <div class="ui card">     
           <div class="ui medium centered image">
             <%= image_tag(brewer.image_url, :alt => "brewer.brewery") %>
-          </div> <!-- end of ui medium centered image -->
+          
                  
-          <div class="content">
-            
-            <%= link_to brewer.brewery, brewer_path(brewer) %>
-          </div> <!-- end of content -->
-                  
-          <div class="extra content">
-            <div class="ui green header"><%= brewer.address %>
-            <%= brewer.zip_code %></div>
-          </div> <!-- end of extra content -->
+            <div class="content">
+              
+              <%= link_to brewer.brewery, brewer_path(brewer) %>
+            </div> <!-- end of content -->
+                    
+            <div class="extra content">
+              <div class="ui green header"><%= brewer.address %>
+              <%= brewer.zip_code %></div>
+            </div> <!-- end of extra content -->
+          </div> <!-- end of ui medium centered image -->
         </div> <!-- end of ui card -->
 
-         
+
             
       <% end %> <!-- end of beers.each -->
       
