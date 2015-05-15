@@ -2,3 +2,9 @@
     <div>
     <%= f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose a category"}  %>
     </div>
+<div>
+	<%= f.label :image %>
+	<%= f.file_field :image, class: "form-control"  %>
+</div>
+
+<!-- html: { multipart: true }   that needs to be put in the form erb. consult -->

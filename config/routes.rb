@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :beers, only: [:index, :show, :create]
-    resources :brewers, only: [:index, :show, :create]
+    resources :brewers, only: [:index, :show, :create, :update]
   end
+
+  #brewer routes
+  post "brewers/:id/edit" => "brewers#update"
+  #brewer routes end
 
   # Routes for user
   get "users" => "users#index" 

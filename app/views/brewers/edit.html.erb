@@ -24,6 +24,10 @@
 		<%= f.label :zip_code %>
 		<%= f.text_field :zip_code %>
 	</div>
+	<div>
+		<%= f.label :image %>
+		<%= f.file_field :image, class: "form-control"  %>
+	</div>
 	<br>
 	<div>
 		<%= f.submit "Submit Changes" %>

@@ -28,8 +28,8 @@ class BrewersController < ApplicationController
 
   def update
     @brewer = Brewer.find(params[:id])
-    if @brewer.update_attributes(brewer_params)
-      redirect_to brewer_path
+    if @brewer.update(brewer_params)
+      redirect_to beers_path
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class BrewersController < ApplicationController
 
 private
 def brewer_params
-  params.require(:brewer).permit(:brewery, :email, :address, :state, :zip_code)
+  params.require(:brewer).permit(:brewery, :email, :address, :state, :zip_code, :image)
 end
 
 end

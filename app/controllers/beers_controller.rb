@@ -68,7 +68,7 @@ class BeersController < ApplicationController
   # end # end of require_login method
 
   def beer_params
-    params.require(:beer).permit(:name)
+    params.require(:beer).permit(:name, :image)
   end  # end of beer_params method
 
   def set_item
