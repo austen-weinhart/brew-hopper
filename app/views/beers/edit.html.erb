@@ -1,0 +1,29 @@
+<h1>Edit this Beer!</h1>
+
+<%= form_for @beer do |f| %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<br>
+<div>
+  <%= f.label :abv %>
+  <%= f.text_field :abv %>
+</div>
+<br>
+<div>
+  <%= f.label :availability %>
+  <%= f.text_field :availability %>
+</div>
+<br>
+<div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</div>
+<br>
+<div>
+  <%= f.submit "submit" %>
+</div>
+
+<% end %>

@@ -16,6 +16,11 @@
           <div class="extra content">
             <%= link_to @beer.style.name, style_path(@beer.style)%>
             <br>
+            <%= link_to "Edit Beer", edit_beer_path(@beer) %>
+            <br>
+            <%= link_to "Delete", beer_path(@beer), method: :delete, data: {confirm: "Are you sure you wish to delete this beer?"} %>
+            <br>
+            <br>
             <%= @beer.description %>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
