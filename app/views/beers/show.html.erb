@@ -20,13 +20,14 @@
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
 
-        <div>
+        <div class="ui card">
           <% @beer.reviews.each do |review| %>
             <h4><%= "Review by #{review.user.first_name}" %></h4>
+            <p><i><%= "Written on #{review.created_at.to_formatted_s(:long)}" %></i></p>
             <p><%= review.description %></p>
             <p><%= link_to "Delete", delete_review_path(review), method: :delete, data: {confirm: "Are you sure?"} %></p>
             <% end %>
-        </div>
+        </div> <!-- end of ui card for reviews -->
 
         <div class="ui card">
           <div>
