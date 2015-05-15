@@ -1,3 +1,6 @@
+<%= link_to "Back to Beers List", beers_path %>
+<br>
+
 <h1><%= @beer.name %></h1>
 
 <div class="basic horizontal segment">
@@ -15,6 +18,7 @@
                   
           <div class="extra content">
             <%= link_to @beer.style.name, style_path(@beer.style)%>
+            <br>
             <br>
             <%= link_to "Edit Beer", edit_beer_path(@beer) %>
             <br>

@@ -4,6 +4,8 @@
     <% @style.beers.each do |beer| %>
       <li>
         <%= link_to beer.name, beer_path(beer) %>
+        <br>
+        <%= link_to beer.brewer.brewery, brewer_path(beer.brewer) %>
       </li>
     <% end %>
   </ul>
