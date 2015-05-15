@@ -16,7 +16,7 @@ $(document).ready(function(){
     var style_id = data.style_id;
 
     var listItem = "<div class='beer-indiv'>";
-    listItem += "<img src='" + imageUrl + "' width='150px' height='150px'>";
+    listItem += "<img src='" + image_url + "' width='150px' height='150px'>";
     listItem += "<p width='100px'>" + name + "<p>";
     listItem += "<p width='100px'>" + description + "<p>";
     

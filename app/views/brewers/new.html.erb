@@ -9,18 +9,8 @@
 </div>
 <br>
 <div>
-	<%= f.label :email %>
-	<%= f.text_field :email %>
-</div>
-<br>
-<div>
 	<%= f.label :address %>
 	<%= f.text_field :address %>
-</div>
-<br>
-<div>
-	<%= f.label :state %>
-	<%= f.text_field :state %>
 </div>
 <br>
 <div>
@@ -29,7 +19,15 @@
 </div>
 <br>
 <div>
+	<%= f.label :website %>
+	<%= f.text_field :website %>
+</div>
+<br>
+<div>
 	<%= f.submit "submit" %>
+</div>
+<div>
+	<button><%= link_to "Go Back", brewers_path %></button>
 </div>
 
 <% end %>
