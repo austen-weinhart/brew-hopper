@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     resources :brewers, only: [:index, :show, :create, :update]
   end
 
+  #review routes
+  post 'beer/:id/reviews' => 'reviews#create', as: :beer_reviews
+  delete 'reviews/:id' => 'reviews#destroy', as: :delete_review
+  #end review routes
+
   #brewer routes
   post "brewers/:id/edit" => "brewers#update"
   #brewer routes end

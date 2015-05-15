@@ -19,7 +19,30 @@
             <%= @beer.description %>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
+
+        <div>
+          <% @beer.reviews.each do |review| %>
+            <h4><%= "Review by #{review.user.first_name}" %></h4>
+            <p><%= review.description %></p>
+            <p><%= link_to "Delete", delete_review_path(review), method: :delete, data: {confirm: "Are you sure?"} %></p>
+            <% end %>
+        </div>
+
+        <div class="ui card">
+          <div>
+            <%= form_for [@beer, @review] do |review| %>
+              <div>
+                <%= review.label :description, "Review" %>
+                <%= review.text_area :description %>
+              </div>
+              <div>
+                <%= review.submit "Add a review!" %>
+              </div>
+              <% end %>
+          </div>
+        </div>
             
       
     </div> <!-- end of ui two cards -->
+
   </div> <!-- end of basic horizontal segment -->
