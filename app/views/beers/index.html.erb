@@ -1,18 +1,19 @@
 <body>
+  
   <div class="basic horizontal segment">
+  <div class="equal height row">
     <div class="ui four cards">
     
       <% @beers.each do |beer| %> 
             
-        <div class="ui card">
-               
+        <div class="ui card">     
           <div class="ui medium centered image">
-            <%= image_tag(beer.image_url, :alt => "beer.name") %>
+            <%= image_tag(beer.image_url, :alt => "beer.name", size: "300x300") %>
           </div> <!-- end of ui medium centered image -->
                  
           <div class="content">
             <div class="meta"><i><%= beer.name %></i></div>
-            <%= link_to beer.name, beer_path(beer), :target => "_blank" %>
+            <%= link_to beer.name, beer_path(beer) %>
           </div> <!-- end of content -->
                   
           <div class="extra content">
@@ -23,6 +24,7 @@
       <% end %> <!-- end of beers.each -->
       
     </div> <!-- end of ui four cards -->
+    </div>
   </div> <!-- end of basic horizontal segment -->
 
 </body>
