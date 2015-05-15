@@ -1,9 +1,34 @@
-<%= @brewer.brewery %>
+<h1><%= @brewer.brewery %></h1>
+
+<div class="basic horizontal segment">
+    <div class="ui four cards">
+            
+        <div class="ui card">     
+          <div class="ui medium centered image">
+            <%= image_tag(@brewer.image_url, :alt => "@brewer.brewery") %>
+          </div> <!-- end of ui medium centered image -->
+                 
+          <div class="content">
+            <%= link_to @brewer.brewery, brewer_path(@brewer) %>
+          </div> <!-- end of content -->
+                  
+          <div class="extra content">
+            <div class="ui green header">$20</div>
+          </div> <!-- end of extra content -->
+        </div> <!-- end of ui card -->
+            
+      
+    </div> <!-- end of ui four cards -->
+  </div> <!-- end of basic horizontal segment -->
 
 <br>
 
-<%= link_to "Edit Brewery", edit_brewer_path %>
+<button><%= link_to "Edit Brewery", edit_brewer_path %></button>
 
 <br>
 
-<%= link_to "Delete Brewery", brewers_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %>
+<button><%= link_to "Delete Brewery", brewers_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %></button>
+
+<br>
+
+<button><%= link_to "Go Back", brewers_path %></button>
