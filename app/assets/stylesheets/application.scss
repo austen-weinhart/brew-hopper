@@ -17,9 +17,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "semantic-ui";
+@import url(http://fonts.googleapis.com/css?family=Rye);
 
 #login {
   float: right;
 }
 
+body {
+  background: #EDAF79;
+  background-image: url("http://www.desktophdphotos.com/wp-content/uploads/2014/12/Sparkling-Golden-Beer-Texture.jpg");
+}
 
+.ui.menu {
+  background: #87240f;
+}
+
+.ui.menu .item {
+  color: white;
+}
+
+.ui.menu .text.item > *, .ui.menu .item > a:not(.ui), .ui.menu .item > p:only-child {
+  color: white;
+}
+
+#welcome {
+  font-family: "Rye";
+  text-align: center;
+  font-size: 72px;
+  color: #73675C;
+}
