@@ -20,18 +20,24 @@
     Styles
     <i class="dropdown icon"></i>
     <div class="menu">
-      <a class="item" href="#"></a>
-      <a class="item" href="#">Online</a>
+      <a class="item" href="#">Pale Lager</a>
+      <a class="item" href="#">Pilsner</a>
+      <a class="item" href="#">Light Lager</a>
+      <a class="item" href="#">Dark Lager</a>
+      <a class="item" href="#">Porter</a>
+      <a class="item" href="#">Stout</a>
+      <a class="item" href="#">Witbier</a>
+      <a class="item" href="#">Brown Ale</a>
     </div>
   </div>
   <!-- End of Dropdown Menu -->
-  <a class="item" href="#">Coupons</a>
-  
   <div class="item">
-    <%= link_to 'Browse', beers_path %>
+    <%= link_to 'Browse Beers', beers_path %>
   </div>
   
-  <a class="item" href="#">Forums</a>
+  <div class="item">
+    <%= link_to 'Browse Brewers', brewers_path%>
+  </div>
   <div class="item">
     <div class="ui icon input">
       <input type="search" placeholder="Search deals..."/>
