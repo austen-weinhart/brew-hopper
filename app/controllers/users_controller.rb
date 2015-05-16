@@ -3,10 +3,16 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+    @styles = Style.all
   end
 
   def new
     @user = User.new
+    @styles = Style.all
+  end
+
+  def show
+    @styles = Style.all
   end
 
   def create
@@ -21,6 +27,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @styles = Style.all
     authorized?
   end
 
