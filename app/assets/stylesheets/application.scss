@@ -17,25 +17,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "semantic-ui";
+@import url(http://fonts.googleapis.com/css?family=Rye);
 
 #login {
   float: right;
 }
 
-.cardImg {
-	width: 300px;
-  	height: 300px;
-  	background: white;
+
+#welcome {
+  font-family: "Rye";
+  text-align: center;
+  font-size: 72px;
+  color: #73675C;
 }
-
-img.cardImg {
-	width: 300px;
-	height: 300px;
-}
-
-.ui.image img {
-	height: 300px;
-}
-
-
-
