@@ -18,15 +18,60 @@
 @import "bootstrap";
 @import "semantic-ui";
 @import url(http://fonts.googleapis.com/css?family=Rye);
+@font-face {
+    font-family: 'Ostrich';
+    src: url('ostrich-sans-inline-regular.eot');
+    src: url('ostrich-sans-inline-regular.eot?#iefix') format('embedded-opentype'),
+         url('ostrich-sans-inline-regular.woff') format('woff'),
+         url('ostrich-sans-inline-regular.ttf') format('truetype'),
+         url('ostrich-sans-inline-regular.svg') format('svg');
+    font-weight: normal;     
+}
 
 #login {
   float: right;
 }
 
+body {
+  background: #E4DEC4;
+  background-image: url("http://www.desktophdphotos.com/wp-content/uploads/2014/12/Sparkling-Golden-Beer-Texture.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-height: 100%;
+}
+
+.ui.menu {
+  background: #87240f;
+}
+
+.ui.menu .item {
+  color: white;
+}
+
+.ui.menu .text.item > *, .ui.menu .item > a:not(.ui), .ui.menu .item > p:only-child {
+  color: white;
+}
 
 #welcome {
   font-family: "Rye";
   text-align: center;
   font-size: 72px;
   color: #73675C;
+}
+
+.cardImg {
+    width: 300px;
+      height: 300px;
+      background: white;
+}
+
+img.cardImg {
+    width: 300px;
+    height: 300px;
+}
+
+.ui.image img {
+    height: 300px;
 }

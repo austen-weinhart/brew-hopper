@@ -12,6 +12,7 @@ class BrewersController < ApplicationController
 
   def new
     @brewer = Brewer.new
+    @styles = Style.all
   end
 
   def create

@@ -33,12 +33,7 @@
   <div class="item">
     <%= link_to 'Browse Brewers', brewers_path%>
   </div>
-  <div class="item">
-    <div class="ui icon input">
-      <input type="search" placeholder="Search deals..."/>
-      <i class="search icon"></i>
-    </div>
-  </div>
+  
     <% if logged_in? %>
       <div class="item" id="login"> 
         Logged in as: <%= current_user.first_name %> | <%= link_to "Edit", edit_user_path(current_user) %> | <%= link_to 'Log Out', logout_path, method: :delete %> 
