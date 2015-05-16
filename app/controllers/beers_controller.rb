@@ -24,9 +24,12 @@ class BeersController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
     @review = Review.new
+    @styles = Style.all
   end # end of show method
 
   def index
+
+    @styles = Style.all
 
     if params[:style].blank?
       @beers = Beer.all.order("created_at DESC")
