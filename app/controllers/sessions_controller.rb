@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    @styles = Style.all
   end
 
   def create
