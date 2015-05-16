@@ -15,6 +15,7 @@ class StylesController < ApplicationController
 
   def show
     @style = Style.find(params[:id])
+    @styles = Style.all
   end # end of show method
 
   def index

@@ -17,21 +17,22 @@
 
   <!-- Begin Dropdown Menu -->
   <div class="ui dropdown item">
-    Deals
+    Styles
     <i class="dropdown icon"></i>
     <div class="menu">
-      <a class="item" href="#">Local</a>
-      <a class="item" href="#">Online</a>
+    <% @styles.each do |style| %>
+      <%= link_to style.name, style_path(style), :class => 'item' %>
+    <% end %>
     </div>
   </div>
   <!-- End of Dropdown Menu -->
-  <a class="item" href="#">Coupons</a>
-  
   <div class="item">
-    <%= link_to 'Browse', beers_path %>
+    <%= link_to 'Browse Beers', beers_path %>
   </div>
   
-  <a class="item" href="#">Forums</a>
+  <div class="item">
+    <%= link_to 'Browse Brewers', brewers_path%>
+  </div>
   <div class="item">
     <div class="ui icon input">
       <input type="search" placeholder="Search deals..."/>

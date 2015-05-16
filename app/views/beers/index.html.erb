@@ -8,7 +8,9 @@
             
         <div class="ui card">     
           <div class="ui medium centered image">
-            <%= image_tag(beer.image_url, :alt => "beer.name") %>
+            <div class="cardImg">
+              <%= image_tag(beer.image_url, :class => "cardImg") %>
+            </div>
           </div> <!-- end of ui medium centered image -->
                  
           <div class="content">
