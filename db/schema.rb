@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514001757) do
+ActiveRecord::Schema.define(version: 20150515220348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,11 +25,15 @@ ActiveRecord::Schema.define(version: 20150514001757) do
     t.text     "food_pairings"
     t.string   "glassware"
     t.integer  "serving_temp"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "review_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "brewer_id"
     t.integer  "style_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "review_id"
   end
 
   add_index "beers", ["brewer_id"], name: "index_beers_on_brewer_id", using: :btree
@@ -41,10 +45,14 @@ ActiveRecord::Schema.define(version: 20150514001757) do
     t.string   "address"
     t.string   "state"
     t.integer  "zip_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "website"
     t.string   "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -52,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150514001757) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "beer_id"
   end
 
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree

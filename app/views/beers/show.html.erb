@@ -1,7 +1,7 @@
 <h1><%= @beer.name %></h1>
 
 <div class="basic horizontal segment">
-    <div class="ui four cards">
+    <div class="ui two cards">
             
         <div class="ui card">     
           <div class="ui medium centered image">
@@ -9,15 +9,41 @@
           </div> <!-- end of ui medium centered image -->
                  
           <div class="content">
-            <div class="meta"><i><%= @beer.name %></i></div>
+            <div class="meta"><i><%= link_to @beer.brewer.brewery, brewer_path(@beer.brewer) %></i></div>
             <%= link_to @beer.name, beer_path(@beer) %>
           </div> <!-- end of content -->
                   
           <div class="extra content">
-            <div class="ui green header">$20</div>
+            <%= link_to @beer.style.name, style_path(@beer.style)%>
+            <br>
+            <%= @beer.description %>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
+
+        <div class="ui card">
+          <% @beer.reviews.each do |review| %>
+            <h4><%= "Review by #{review.user.first_name}" %></h4>
+            <p><i><%= "Written on #{review.created_at.to_formatted_s(:long)}" %></i></p>
+            <p><%= review.description %></p>
+            <p><%= link_to "Delete", delete_review_path(review), method: :delete, data: {confirm: "Are you sure?"} %></p>
+            <% end %>
+        </div> <!-- end of ui card for reviews -->
+
+        <div class="ui card">
+          <div>
+            <%= form_for [@beer, @review] do |review| %>
+              <div>
+                <%= review.label :description, "Review" %>
+                <%= review.text_area :description %>
+              </div>
+              <div>
+                <%= review.submit "Add a review!" %>
+              </div>
+              <% end %>
+          </div>
+        </div>
             
       
-    </div> <!-- end of ui four cards -->
+    </div> <!-- end of ui two cards -->
+
   </div> <!-- end of basic horizontal segment -->

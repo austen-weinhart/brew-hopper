@@ -1,7 +1,7 @@
 <h1>Add Your Brewery Now!</h1>
 
 
-<%= form_for @brewer do |f| %>
+<%= form_for @brewer, html: { multipart: true } do |f| %>
 
 <div>
 	<%= f.label :brewery %>
@@ -21,6 +21,11 @@
 <div>
 	<%= f.label :website %>
 	<%= f.text_field :website %>
+</div>
+
+<div>
+	<%= f.label :image %>
+	<%= f.file_field :image, class: "form-control"  %>
 </div>
 <br>
 <div>

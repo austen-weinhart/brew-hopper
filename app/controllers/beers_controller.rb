@@ -23,6 +23,7 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
+    @review = Review.new
   end # end of show method
 
   def index
@@ -68,7 +69,7 @@ class BeersController < ApplicationController
   # end # end of require_login method
 
   def beer_params
-    params.require(:beer).permit(:name)
+    params.require(:beer).permit(:name, :image)
   end  # end of beer_params method
 
   def set_item
