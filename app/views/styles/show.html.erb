@@ -1,11 +1,33 @@
 <div class="basic horizontal segment">
 <h1 class="header"><%= @style.name %></h1>
 
-<ul>
-    <% @style.beers.each do |beer| %>
-      <li>
+<div class="ui three cards">
+
+  <% @style.beers.each do |beer| %> 
+        
+    <div class="ui card">     
+      <div class="ui medium centered image">
+        <div class="cardImg">
+          <%= image_tag(beer.image_url, :class => "cardImg") %>
+        </div>
+      </div> <!-- end of ui medium centered image -->
+             
+      <div class="content">
+        <div class="meta"><i><%= link_to beer.brewer.brewery, brewer_path(beer.brewer) %></i></div>
         <%= link_to beer.name, beer_path(beer) %>
-      </li>
-    <% end %>
-  </ul>
+      </div> <!-- end of content -->
+              
+      <div class="extra content">
+        <%= link_to beer.style.name, style_path(beer.style)%>
+      </div> <!-- end of extra content -->
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="4"></div>
+      </div>
+    </div> <!-- end of ui card -->
+        
+  <% end %> <!-- end of beers.each -->
+  
+</div> <!-- end of ui three cards -->
+
 </div>

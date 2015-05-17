@@ -14,8 +14,8 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+/*@import "bootstrap-sprockets";
+@import "bootstrap";*/
 @import "semantic-ui";
 @import url(http://fonts.googleapis.com/css?family=Rye);
 @import url(http://fonts.googleapis.com/css?family=Special+Elite);
@@ -98,3 +98,11 @@ img.cardImg {
 ul {
   list-style: none;
 }
+
+/*.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+}*/
