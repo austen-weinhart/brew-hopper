@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'static_pages/home'
+  get 'static_pages/' => 'static_pages#home'
 
   namespace :api do
     resources :beers, only: [:index, :show, :create]
