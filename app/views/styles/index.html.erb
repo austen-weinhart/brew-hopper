@@ -1,7 +1,9 @@
- <h1>Beer Styles</h1>
+<div class="basic horizontal segment">
+ <h1 class="header">Beer Styles</h1>
 
  <ul>
    <% @styles.each do |style| %>
     <li><%= link_to style.name, style_path(style) %></li>
    <% end %>
  </ul>
+</div>

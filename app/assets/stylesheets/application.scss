@@ -61,6 +61,20 @@ body {
   font-size: 72px;
 }
 
+#subwelcome {
+  font-family: "Special Elite";
+  text-align: center;
+  font-size: 48px;
+}
+
+.header{
+  font-family: "Special Elite";
+}
+
+.item{
+  font-family: "Special Elite";
+}
+
 .cardImg {
     width: 300px;
       height: 300px;
@@ -74,4 +88,13 @@ img.cardImg {
 
 .ui.image img {
     height: 300px;
+}
+
+.segment {
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
 }

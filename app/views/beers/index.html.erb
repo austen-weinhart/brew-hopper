@@ -2,7 +2,7 @@
   
   <div class="basic horizontal segment">
   <div class="equal height row">
-    <div class="ui four cards">
+    <div class="ui three cards">
     
       <% @beers.each do |beer| %> 
             
@@ -21,11 +21,15 @@
           <div class="extra content">
             <%= link_to beer.style.name, style_path(beer.style)%>
           </div> <!-- end of extra content -->
+          <div class="extra">
+            Rating:
+            <div class="ui star rating" data-rating="4"></div>
+          </div>
         </div> <!-- end of ui card -->
             
       <% end %> <!-- end of beers.each -->
       
-    </div> <!-- end of ui four cards -->
+    </div> <!-- end of ui three cards -->
     </div>
   </div> <!-- end of basic horizontal segment -->
 
