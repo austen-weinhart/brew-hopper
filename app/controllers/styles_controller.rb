@@ -22,6 +22,7 @@ class StylesController < ApplicationController
     @styles = Style.all
   end # end of index method
 
+
   # def edit
   #   @aquarium = Aquarium.find(params[:id])
   #  end # end of edit method
