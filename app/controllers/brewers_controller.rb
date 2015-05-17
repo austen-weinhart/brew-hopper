@@ -27,6 +27,7 @@ class BrewersController < ApplicationController
 
   def edit
     @brewer = Brewer.find(params[:id])
+    @styles = Style.all
   end
 
   def update
