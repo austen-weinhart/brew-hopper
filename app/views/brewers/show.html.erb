@@ -6,6 +6,7 @@
           <div class="ui medium centered image">
             <div class="cardImg">
               <%= image_tag(@brewer.image_url, :class => "cardImg") %>
+
             </div>
                  
           <div class="content">
@@ -16,11 +17,10 @@
             <div class="ui green header">
             <%= @brewer.address %> <%= @brewer.zip_code %>
             </div>
-      
           </div> <!-- end of extra content -->
-          </div> <!-- end of ui medium centered image -->
-        </div> <!-- end of ui card -->
-      
+        </div> <!-- end of ui medium centered image -->
+      </div> <!-- end of ui card -->
+      <%= image_tag @brewer.image.url(:medium) if @brewer.image.file? %>
     </div> <!-- end of ui four cards -->
   
 

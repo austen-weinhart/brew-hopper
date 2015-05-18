@@ -85,9 +85,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-# resources :beers
+resources :beers
 resources :styles
-# resources :brewers
+resources :brewers
 
 
 # get "brewers/" => "brewers#index" 

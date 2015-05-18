@@ -45,9 +45,10 @@ class BrewersController < ApplicationController
     redirect_to brewers_path
   end
 
+
 private
 def brewer_params
-  params.require(:brewer).permit(:brewery, :email, :address, :state, :zip_code, :image)
+  params.require(:brewer).permit(:brewery, :email, :address, :state, :zip_code, :image, :delete_image)
 end
 
 end

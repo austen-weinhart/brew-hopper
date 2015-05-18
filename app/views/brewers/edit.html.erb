@@ -25,8 +25,12 @@
 		<%= f.text_field :zip_code %>
 	</div>
 	<div>
+		<% if @brewer.image.exists? %>
+  			<%= image_tag @brewer.image.url(:thumb) %><br/>
+		<% end %>
 		<%= f.label :image %>
-		<%= f.file_field :image, class: "form-control"  %>
+		<%= f.file_field :image %>
+		<%= f.check_box :delete_image %>Delete Image<br/>
 	</div>
 	<br>
 	<div>
