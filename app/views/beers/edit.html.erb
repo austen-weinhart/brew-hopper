@@ -1,0 +1,51 @@
+<div class="basic horizontal segment">
+
+<%= form_for :beer do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :abv %>
+    <%= f.text_field :abv %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :availability %>
+    <%= f.text_field :availability %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+  </div>
+  <div>
+    <%= f.label :brewer %>
+    <%= f.text_field :brewer %>
+  </div>
+  <div>
+    <% if @beer.image.exists? %>
+        <%= image_tag @beer.image.url(:thumb) %><br/>
+    <% end %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <!-- <%#= f.check_box :delete_image %>Delete Image<br/> -->
+  </div>
+  <br>
+  <div>
+    <%= f.submit "Submit Changes", class: "btn btn-danger" %>
+  </div>
+  <br>
+  <div>
+    <%= link_to "Go Back", beer_path, class: "btn btn-danger" %>
+  </div>
+
+<% end %>
+
+</div>

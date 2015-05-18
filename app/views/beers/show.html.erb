@@ -19,6 +19,20 @@
             <%= @beer.description %>
             <br>
             <br>
+
+            <%= link_to "Edit Beer", edit_beer_path, class: "btn btn-danger" %>
+            <br>
+            <br>
+
+            <%= link_to "Delete Beer", beers_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"}, class: "btn btn-danger" %>
+            <br>
+            <br>
+
+            <%= link_to "Go Back", beers_path, class: "btn btn-danger" %>
+
+            <br>
+            <br>
+            <br>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
 
@@ -30,6 +44,7 @@
             <p><%= link_to "Delete", delete_review_path(review), method: :delete, data: {confirm: "Are you sure?"} %></p>
             <% end %>
         </div> <!-- end of ui card for reviews -->
+
 
         <div class="ui card">
           <div>

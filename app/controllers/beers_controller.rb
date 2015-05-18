@@ -8,6 +8,7 @@ class BeersController < ApplicationController
     @beer = Beer.new
     @brewers = Brewer.all
     @users = User.all
+    @styles = Style.all
   end # end of new method
 
   def create

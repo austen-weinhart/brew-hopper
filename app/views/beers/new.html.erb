@@ -1,10 +1,59 @@
 <!-- drop down category -->
-    <div>
-    <%= f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose a category"}  %>
+   <!--  <div>
+    <%#= f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose a category"}  %>
     </div>
 <div>
-	<%= f.label :image %>
-	<%= f.file_field :image, class: "form-control"  %>
-</div>
+	<%#= f.label :image %>
+	<%#= f.file_field :image, class: "form-control"  %>
+</div> -->
 
 <!-- html: { multipart: true }   that needs to be put in the form erb. consult -->
+
+<div class="basic horizontal segment">
+<h1 class="header">Add Your Beer Now!</h1>
+
+
+<%= form_for @beer, html: { multipart: true } do |f| %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<br>
+<div>
+  <%= f.label :abv %>
+  <%= f.text_field :abv %>
+</div>
+<br>
+<div>
+  <%= f.label :availability %>
+  <%= f.text_field :availability %>
+</div>
+<br>
+<div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</div>
+<div>
+  <%= f.label :style %>
+  <%= f.text_field :style %>
+</div>
+<div>
+  <%= f.label :brewer %>
+  <%= f.text_field :brewer %>
+</div>
+<div>
+  <%= f.label :image %>
+  <%= f.file_field :image, class: "form-control"  %>
+</div>
+<br>
+<div>
+  <%= f.submit "Submit", class: "btn btn-danger" %>
+</div>
+<br>
+<div>
+  <%= link_to "Go Back", brewers_path, class: "btn btn-danger" %>
+</div>
+
+<% end %>
+</div>
