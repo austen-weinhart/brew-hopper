@@ -1,6 +1,6 @@
 <div class="basic horizontal segment">
   <h1 class="header"><%= @brewer.brewery %></h1>
-    <div class="ui four cards">
+    <div class="ui three cards">
             
         <div class="ui card">     
           <div class="ui medium centered image">
@@ -14,39 +14,38 @@
           </div> <!-- end of content -->
                   
           <div class="extra content">
-            <div class="ui green header">
+            <div>
             <%= @brewer.address %> <%= @brewer.zip_code %>
             </div>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui medium centered image -->
       </div> <!-- end of ui card -->
       <%= image_tag @brewer.image.url(:medium) if @brewer.image.file? %>
-    </div> <!-- end of ui four cards -->
+    </div> <!-- end of ui three cards -->
   
 
 
 <br>
 
-<button><%= link_to "Edit Brewery", edit_brewer_path %></button>
-
+<%= link_to "Edit Brewery", edit_brewer_path, class: "btn btn-danger" %>
 <br>
-
-<button><%= link_to "Delete Brewery", brewers_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %></button>
-
 <br>
 
-<button><%= link_to "Go Back", brewers_path %></button>
+<%= link_to "Delete Brewery", brewers_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"}, class: "btn btn-danger" %>
+<br>
+<br>
+
+<%= link_to "Go Back", brewers_path, class: "btn btn-danger" %>
 
 <br>
 <br>
 <br>
-<br>
-<br>
+
 </div> <!-- end of basic horizontal segment -->
 
 <div class="basic horizontal segment">
   <div class="equal height row">
-    <div class="ui four cards">
+    <div class="ui three cards">
 
       <% @brewer.beers.each do |beer| %>
     <div class="ui card">     
@@ -68,7 +67,7 @@
       </div><!-- end ui medium centered image -->
     </div><!-- end ui card -->
     <% end %>
-    </div><!-- end ui four cards -->
+    </div><!-- end ui three cards -->
   </div><!-- end equal height row -->
 </div><!-- end basic horizontal segment -->
 

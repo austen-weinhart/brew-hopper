@@ -1,7 +1,8 @@
 <!-- This is the log in screen to create a new user session -->
+<div class="basic horizontal segment">
 <div class="col-md-2">
-  <div class="login text-center">
-    <h1>Log In</h1>
+  <div class="login text-left">
+    <h1 class="header">Log In</h1>
     
     <%= form_for :login do |f| %>
       <div class="form-group">
@@ -15,8 +16,10 @@
       </div>
 
       <div>
-        <%= f.submit 'Log In', class: "btn btn-primary" %> <%= link_to "Home", beers_path, class: "btn btn-primary" %>
+        <%= f.submit 'Log In', class: "btn btn-danger" %> 
+        <%#= link_to "Home", beers_path, class: "btn btn-danger" %>
       </div> 
     <% end %>
   </div>  
+</div>
 </div>

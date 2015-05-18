@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    @styles = Style.all
     user = User.find_by(email: params[:login][:email])
 
     if user && user.authenticate(params[:login][:password])

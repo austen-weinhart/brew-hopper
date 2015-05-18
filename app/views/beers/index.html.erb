@@ -3,6 +3,9 @@
   <div class="basic horizontal segment">
   <div class="equal height row">
     <div class="ui three cards">
+      <%= link_to 'Add a Beer!', new_beer_path, class: "btn btn-danger" %>
+      <br>
+      <br>
     
       <% @beers.each do |beer| %> 
             
@@ -20,6 +23,8 @@
                   
           <div class="extra content">
             <%= link_to beer.style.name, style_path(beer.style)%>
+            <br>
+            Abv: <%= beer.abv %>
           </div> <!-- end of extra content -->
           <div class="extra">
             Rating:

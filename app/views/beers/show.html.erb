@@ -13,9 +13,12 @@
           </div> <!-- end of content -->
                   
           <div class="extra content">
-            <%= link_to @beer.style.name, style_path(@beer.style)%>
+            <i><%= link_to @beer.style.name, style_path(@beer.style)%></i>
+            <br>
             <br>
             <%= @beer.description %>
+            <br>
+            <br>
           </div> <!-- end of extra content -->
         </div> <!-- end of ui card -->
 
@@ -32,12 +35,16 @@
           <div>
             <%= form_for [@beer, @review] do |review| %>
               <div>
+                <br>
                 <%= review.label :description, "Review" %>
+                <br>
                 <%= review.text_area :description %>
               </div>
+                <br>
               <div>
-                <%= review.submit "Add a review!" %>
+                <%= review.submit "Add a review!", class: "btn btn-danger" %>
               </div>
+                <br>
               <% end %>
           </div>
         </div>

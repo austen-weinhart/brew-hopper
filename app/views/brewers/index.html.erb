@@ -1,13 +1,14 @@
 <body>
   
   <div class="basic horizontal segment">
-  <button><%= link_to 'Add a Brewery!', new_brewer_path %></button>
-  <br>
-  <br>
-  <br>
-  <br>
+  
+  
   <div class="equal height row">
     <div class="ui three cards">
+
+      <%= link_to 'Add a Brewery!', new_brewer_path, class: "btn btn-danger" %>
+      <br>
+      <br>
     
       <% @brewers.each do |brewer| %> 
             
@@ -24,8 +25,12 @@
             </div> <!-- end of content -->
                     
             <div class="extra content">
-              <div class="ui green header"><%= brewer.address %>
-              <%= brewer.zip_code %></div>
+              <div>
+                <%= brewer.address %>
+                <%= brewer.zip_code %>
+                <br>
+                <br>
+              </div>
             </div> <!-- end of extra content -->
           </div> <!-- end of ui medium centered image -->
         </div> <!-- end of ui card -->
