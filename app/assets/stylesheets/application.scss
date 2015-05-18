@@ -108,6 +108,10 @@ ul {
   background-color: #87240f;
 }
 
+.ui.cards > .card > .extra a:not(.ui), .ui.card > .extra a:not(.ui) {
+  color: white;
+}
+
 /*.form-control {
   width: 25%;
 }*/

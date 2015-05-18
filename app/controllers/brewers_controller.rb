@@ -16,6 +16,7 @@ class BrewersController < ApplicationController
   end
 
   def create
+    @styles = Style.all
     @brewer = Brewer.new(brewer_params)
 
     if @brewer.save

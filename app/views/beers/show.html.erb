@@ -37,16 +37,19 @@
         </div> <!-- end of ui card -->
 
         <div class="ui card">
+          <div class="content">
           <% @beer.reviews.each do |review| %>
             <h4><%= "Review by #{review.user.first_name}" %></h4>
             <p><i><%= "Written on #{review.created_at.to_formatted_s(:long)}" %></i></p>
             <p><%= review.description %></p>
             <p><%= link_to "Delete", delete_review_path(review), method: :delete, data: {confirm: "Are you sure?"} %></p>
             <% end %>
+          </div>
         </div> <!-- end of ui card for reviews -->
 
 
         <div class="ui card">
+          <div class="content">
           <div>
             <%= form_for [@beer, @review] do |review| %>
               <div>
@@ -61,6 +64,7 @@
               </div>
                 <br>
               <% end %>
+          </div>
           </div>
         </div>
             
