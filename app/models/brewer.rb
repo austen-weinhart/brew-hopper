@@ -1,5 +1,5 @@
 class Brewer < ActiveRecord::Base
-  has_many :beers
+  has_many :beers, dependent: :destroy
 
   before_validation { image.clear if @delete_image }
 
